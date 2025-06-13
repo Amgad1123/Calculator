@@ -1,0 +1,43 @@
+.calculator {
+    display: flex;
+    border: 2px solid black;
+    height: 500px;
+    width: 300px;
+    margin-left: 610px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;;
+    background: maroon;
+}
+
+header {
+    text-align: center;
+}
+
+#searchBar {
+    margin-top: 100px;
+    height: 30px;
+    width: 250px;
+    border: 2px solid black;
+    text-align: right;
+}
+
+button{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+}
+.content{
+    max-width: 250px;
+    gap: 14px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.clear{
+    margin-top: 25px;
+}
