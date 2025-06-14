@@ -41,12 +41,21 @@ buttons.forEach((button => {
                 document.getElementById('searchBar').value += val;
             }
         }
+        else if(number != undefined && operator != 0 && val === '.'
+        ) {
+            number += val
+            document.getElementById('searchBar').value += val;
+        }
         else if(number != undefined && operator != 0 && val != '='
         ) {
             if (secondNumber == null) {
                 secondNumber = val
                 document.getElementById('searchBar').value += val;
             } 
+            else if(val == ".") {
+                secondNumber += val
+                document.getElementById('searchBar').value += val;
+            }
             else {
             secondNumber += val;
             document.getElementById('searchBar').value += val;
@@ -58,7 +67,7 @@ buttons.forEach((button => {
         else if(val == '=' && number != undefined &&
             operator != 0 && secondNumber != undefined
         ){
-            operate(operator, parseInt(number), parseInt(secondNumber));
+            operate(operator, parseFloat(number), parseFloat(secondNumber));
         }
 
     });
